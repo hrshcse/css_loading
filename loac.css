@@ -1,0 +1,60 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background: lightgrey;
+    align-items: center;
+    justify-content: center;
+    height: 100hv;
+    display: flex;
+    
+    
+}
+.ld {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border-top: 10px solid red;
+    animation: a1 2s linear infinite;
+    
+}
+.ld::before,.ld::after
+{ content:"";
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0px; top: -10px;
+    border-radius: 50%;
+    
+}
+.ld::after{
+    border-top:10px solid orange;
+    transform: rotate(120deg);
+}
+
+.ld::before{
+    border-top:10px solid blue;
+    transform: rotate(240deg);
+}
+p{
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    line-height: 170px;animation: a2 2s linear infinite;
+}
+@keyframes a1{
+    to{
+        transform: rotate(360deg);
+        background-color: aquamarine;    }
+}
+@keyframes a2{
+    to{
+        transform: rotate(-360deg);
+        
+    }
+}
